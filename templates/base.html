@@ -1,0 +1,24 @@
+{% load bootstrap5 %}
+<!DOCTYPE html>
+{% load bootstrap5 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>{% block title %} {% endblock %}</title>
+  </head>
+  <body>
+    <nav>
+      <div>
+        <a href="">Home</a>
+        <a href="">Characters</a>
+        <a href="{% url 'roomapp:rooms' %}">Games</a>
+      </div>
+    </nav>
+    {% block content %}
+    {% endblock %}
+    {% block script %}
+    {% endblock %}
+  </body>
+</html>
